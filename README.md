@@ -99,6 +99,25 @@ cp conf.yaml.example conf.yaml
 brew install marp-cli
 ```
 
+### Windows Installation
+
+Windows users can simplify the setup process by using the provided batch script:
+
+1.  After cloning the repository, navigate to its root directory in your command prompt.
+2.  Run the `install_windows.bat` script:
+    ```batch
+    install_windows.bat
+    ```
+3.  This script will:
+    *   Check for `uv` and `pnpm` and guide you if they are missing.
+    *   Install Python dependencies using `uv sync`.
+    *   Install Node.js dependencies for the web UI (in the `web` directory) using `pnpm install`.
+    *   Copy necessary configuration files (`.env.example` to `.env`, `conf.yaml.example` to `conf.yaml`).
+    *   Provide instructions for installing `marp-cli` (required for PPT generation).
+4.  After the script completes, ensure you configure your `.env` and `conf.yaml` files with your API keys and preferred settings as mentioned in the general instructions and the [Configuration Guide](docs/configuration_guide.md).
+
+For other operating systems, or for manual installation on Windows, please follow the steps below.
+
 Optionally, install web UI dependencies via [pnpm](https://pnpm.io/installation):
 
 ```bash
